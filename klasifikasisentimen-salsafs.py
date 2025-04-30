@@ -73,5 +73,5 @@ st.markdown("""
         color: gray;
     }
     </style>
-    <div class="credit">Salsa Febriliana Sandita | 24050121130088 | UNDIP 2025</div>
+    <div class="credit">SALSA FEBRILIANA SANDITA | 24050121130088 | STATISTIKA UNDIP 2025</div>
 """, unsafe_allow_html=True)
