@@ -19,18 +19,18 @@ def detect_sentiment(text):
     blob = TextBlob(text)
     sentiment = blob.sentiment.polarity
     if sentiment > 0:
-        return "Positif"
+        return "Positive"
     elif sentiment < 0:
-        return "Negatif"
+        return "Negative"
 
 def detect_custom_sentiment(text):
     words = text.lower().split()
     positive_count = sum(1 for word in words if word in positive_words)
     negative_count = sum(1 for word in words if word in negative_words)
     if negative_count > positive_count:
-        return "Negatif"
+        return "Negative"
     elif positive_count > negative_count:
-        return "Positif"
+        return "Positive"
 
 # Streamlit UI
 st.title("Sentiment Analysis")
@@ -58,7 +58,7 @@ if st.button('Analyze Sentiment'):
         elif custom_sentiment == "Positive":
             st.markdown(f"Sentiment Review: <span style='color:green; font-weight:bold;'>{custom_sentiment}</span>", unsafe_allow_html=True)
         else:
-            st.write(f"Lengkapi Ulasan")
+            st.write(f"Complete Review!")
     else:
         st.write("Please input text for analyze!")
 
