@@ -53,14 +53,14 @@ if st.button('Analyze Sentiment'):
         custom_sentiment = detect_custom_sentiment(text)
 
         # Menentukan warna berdasarkan sentimen
-        if custom_sentiment == "Negatif":
-            st.markdown(f"Sentimen Ulasan: <span style='color:red; font-weight:bold;'>{custom_sentiment}</span>", unsafe_allow_html=True)
-        elif custom_sentiment == "Positif":
-            st.markdown(f"Sentimen Ulasan: <span style='color:green; font-weight:bold;'>{custom_sentiment}</span>", unsafe_allow_html=True)
+        if custom_sentiment == "Negative":
+            st.markdown(f"Sentiment Review: <span style='color:red; font-weight:bold;'>{custom_sentiment}</span>", unsafe_allow_html=True)
+        elif custom_sentiment == "Positive":
+            st.markdown(f"Sentiment Review: <span style='color:green; font-weight:bold;'>{custom_sentiment}</span>", unsafe_allow_html=True)
         else:
             st.write(f"Lengkapi Ulasan")
     else:
-        st.write("Silahkan masukkan teks untuk dianalisis!")
+        st.write("Please input text for analyze!")
 
 # Tambahkan credit di pojok kiri bawah
 st.markdown("""
